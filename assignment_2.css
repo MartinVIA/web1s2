@@ -38,12 +38,30 @@ html{background-color: gray;background-image: linear-gradient(to top, rgba(54, 9
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="email"],
+input[type="date"] {
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 6px;
     margin-top: 5px;
+    width: 100%;
+}
+
+input:invalid {
+    border-color: #ff0000;
+}
+
+.error-message {
+    display: none;
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+input:invalid + .error-message {
+    display: block;
 }
 
 label {
